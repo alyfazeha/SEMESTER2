@@ -1,7 +1,5 @@
 package JOBSHEET1;
-
 import java.util.Scanner;
-
 public class Pemilihan {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -45,8 +43,13 @@ public class Pemilihan {
                 System.out.println("Nilai Huruf : E");
             }
             
-            System.out.println("==============================");
-            System.out.println("SELAMAT ANDA LULUS!");
+            if (nilaiAkhir < 50) {
+                System.out.println("==============================");
+                System.out.println("MAAF, ANDA TIDAK LULUS!");
+            } else {
+                System.out.println("==============================");
+                System.out.println("SELAMAT ANDA LULUS!");
+            }
         } else {
             System.out.println("==============================");
             System.out.println("nilai tidak valid");
