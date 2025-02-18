@@ -1,7 +1,5 @@
 package JOBSHEET1;
-
 import java.util.Scanner;
-
 public class Kubus {
     static Scanner sc = new Scanner(System.in);
     static int pilihanMenu;
