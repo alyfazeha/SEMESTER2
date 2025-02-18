@@ -27,7 +27,7 @@ public class Dosen05 {
     }
     void setStatusAktif( boolean status ) {
         statusAktif = status;
-        if (statusAktif = true) {
+        if (statusAktif == true) {
             System.out.println("Dosen Aktif!!");
         } else {
             System.out.println("Dosen Non-Aktif!!");

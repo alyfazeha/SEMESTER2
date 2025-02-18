@@ -17,6 +17,7 @@ public class DosenMain05 {
 
         Dosen05 zahra = new Dosen05("ZH002", "Zahra rarara", true, 2017, "Komputer");
         zahra.tampilInformasi();
+        zahra.setStatusAktif(true);
 
     }
 }
