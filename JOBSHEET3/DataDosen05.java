@@ -1,9 +1,9 @@
 package JOBSHEET3;
 public class DataDosen05 {
     void dataSemuaDosen(Dosen05[] arrayOfDosen,int n){
-        System.out.println("===============================");
-        System.out.println("======= DATA SEMUA DOSEN ======");
-        System.out.println("===============================");
+        System.out.println("======================================");
+        System.out.println("========== DATA SEMUA DOSEN ==========");
+        System.out.println("======================================");
         for (int a = 0; a < n; a++){
             System.out.println("Data Dosen Ke-" + (a+1));
             System.out.println("Kode             : " + arrayOfDosen[a].kode);
@@ -20,9 +20,9 @@ public class DataDosen05 {
     }
 
     void jumlahDosenPerJenisKelamin(Dosen05[] arrayOfDosen, int n){
-        System.out.println("===============================");
-        System.out.println("== DOSEN BERDASARKAN GENDER ===");
-        System.out.println("===============================");
+        System.out.println("======================================");
+        System.out.println("====== DOSEN BERDASARKAN GENDER ======");
+        System.out.println("======================================");
         System.out.println("Dosen Wanita : ");
         for (int a = 0; a < n; a++){
             if (arrayOfDosen[a].jenisKelamin == true) {
@@ -39,9 +39,9 @@ public class DataDosen05 {
     }
     
     void rerataUsiaDosenPerJenisKelamin(Dosen05[] arrayOfDosen, int n){
-        System.out.println("===============================");
-        System.out.println("== RATA RATA USIA BDS GENDER ==");
-        System.out.println("===============================");
+        System.out.println("======================================");
+        System.out.println("====== RATA RATA USIA BDS GENDER =====");
+        System.out.println("======================================");
         int sumWanita = 0;
         int sumPria= 0;
         int countWanita = 0;
@@ -68,9 +68,9 @@ public class DataDosen05 {
     }
 
     void infoDosenPalingTua(Dosen05[] arrayOfDosen, int n) {
-        System.out.println("===============================");
-        System.out.println("====== DOSEN PALING TUA =======");
-        System.out.println("===============================");
+        System.out.println("======================================");
+        System.out.println("========= DOSEN PALING TUA ===========");
+        System.out.println("======================================");
         int tertua = arrayOfDosen[0].usia;
         int b = 0;
        
@@ -85,9 +85,9 @@ public class DataDosen05 {
     }
 
     void infoDosenPalingMuda(Dosen05[] arrayOfDosen, int n ) {
-        System.out.println("===============================");
-        System.out.println("====== DOSEN PALING MUDA ======");
-        System.out.println("===============================");
+        System.out.println("======================================");
+        System.out.println("========== DOSEN PALING MUDA =========");
+        System.out.println("======================================");
         int termuda = arrayOfDosen[0].usia;
 
         int b = 0;
