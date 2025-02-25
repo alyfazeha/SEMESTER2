@@ -3,34 +3,30 @@ import java.util.Scanner;
 public class MahasiswaDemo05 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Mahasiswa05[] arrayOfMahasiwa = new Mahasiswa05[3];
+        Mahasiswa05[] arrayOfMahasiswa = new Mahasiswa05[3];
         String dummy = "";
+        int n = 3;
 
-        for (int i = 0; i < 3; i++) {
-            arrayOfMahasiwa[i] = new Mahasiswa05();
+        for (int i = 0; i < n; i++) {
+            arrayOfMahasiswa[i] = new Mahasiswa05();
 
             System.out.println("Masukkan Data Mahasiswa Ke-" + (i+1));
             System.out.print("NIM     : ");
-            arrayOfMahasiwa[i].nim = sc.nextLine();
+            arrayOfMahasiswa[i].nim = sc.nextLine();
             System.out.print("Nama    : ");
-            arrayOfMahasiwa[i].nama = sc.nextLine();
+            arrayOfMahasiswa[i].nama = sc.nextLine();
             System.out.print("Kelas   : ");
-            arrayOfMahasiwa[i].kelas = sc.nextLine();
+            arrayOfMahasiswa[i].kelas = sc.nextLine();
             System.out.print("IPK     : ");
             dummy= sc.nextLine();
-            arrayOfMahasiwa[i].ipk = Float.parseFloat(dummy);
+            arrayOfMahasiswa[i].ipk = Float.parseFloat(dummy);
             System.out.println("-----------------------------------");
         }
 
-        for (int i = 0; i < 3; i++) {
-            System.out.println("Data Masiswa Ke-" + (i+1));
-            System.out.println("NIM      : " + arrayOfMahasiwa[i].nim);
-            System.out.println("Nama     : " + arrayOfMahasiwa[i].nama);
-            System.out.println("Kelas    : " + arrayOfMahasiwa[i].kelas);
-            System.out.println("IPK      : " + arrayOfMahasiwa[i].ipk);
-            System.out.println("-----------------------------------");
-        }
-
+        System.out.println("ini hasilnya");
+        Mahasiswa05 mahasiswa = new Mahasiswa05();
+        mahasiswa.cetakInfo(arrayOfMahasiswa);
+        // Mahasiswa05[] arrayOfMahasiwa
         // arrayOfMahasiwa[0] = new Mahasiswa05();
         // arrayOfMahasiwa[0].nim = "244107060033";
         // arrayOfMahasiwa[0].nama = "AGNES TITANIA KINANTI";
