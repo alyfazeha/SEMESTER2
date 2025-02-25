@@ -4,13 +4,32 @@ public class MahasiswaDemo05 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Mahasiswa05[] arrayOfMahasiwa = new Mahasiswa05[3];
-        String dummy;
+        String dummy = "";
 
         for (int i = 0; i < 3; i++) {
             arrayOfMahasiwa[i] = new Mahasiswa05();
-            
+
+            System.out.println("Masukkan Data Mahasiswa Ke-" + (i+1));
+            System.out.print("NIM     : ");
+            arrayOfMahasiwa[i].nim = sc.nextLine();
+            System.out.print("Nama    : ");
+            arrayOfMahasiwa[i].nama = sc.nextLine();
+            System.out.print("Kelas   : ");
+            arrayOfMahasiwa[i].kelas = sc.nextLine();
+            System.out.print("IPK     : ");
+            dummy= sc.nextLine();
+            arrayOfMahasiwa[i].ipk = Float.parseFloat(dummy);
+            System.out.println("-----------------------------------");
         }
 
+        for (int i = 0; i < 3; i++) {
+            System.out.println("Data Masiswa Ke-" + (i+1));
+            System.out.println("NIM      : " + arrayOfMahasiwa[i].nim);
+            System.out.println("Nama     : " + arrayOfMahasiwa[i].nama);
+            System.out.println("Kelas    : " + arrayOfMahasiwa[i].kelas);
+            System.out.println("IPK      : " + arrayOfMahasiwa[i].ipk);
+            System.out.println("-----------------------------------");
+        }
 
         // arrayOfMahasiwa[0] = new Mahasiswa05();
         // arrayOfMahasiwa[0].nim = "244107060033";
