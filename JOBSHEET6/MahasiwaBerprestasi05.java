@@ -30,4 +30,18 @@ public class MahasiwaBerprestasi05 {
             }
         }
     }
+
+    void selectionSort() {
+        for (int i = 0; i < (listMhs.length-1); i++) {
+            int idxMin = i;
+            for (int j = (i+1); j < listMhs.length; j++) {
+                if (listMhs[j].ipk < listMhs[idxMin].ipk) {
+                    idxMin = j;
+                }
+            }
+            Mahasiswa05 tmp = listMhs[idxMin];
+            listMhs[idxMin] = listMhs[i];
+            listMhs[i] = tmp;
+        }
+    }
 }
