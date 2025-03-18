@@ -1,18 +1,23 @@
 package JOBSHEET6;
+import java.util.Scanner;
 public class MahasiswaDemo05 {
     public static void main(String[] args) {    
+        Scanner input = new Scanner(System.in);
         MahasiwaBerprestasi05 list = new MahasiwaBerprestasi05();
-        Mahasiswa05 m1 = new Mahasiswa05("123", "Zidan", "2A", 3.2);
-        Mahasiswa05 m2 = new Mahasiswa05("124", "Ayu", "2A", 3.5);
-        Mahasiswa05 m3 = new Mahasiswa05("125", "Sofi", "2A", 3.1);
-        Mahasiswa05 m4 = new Mahasiswa05("126", "Sita", "2A", 3.9);
-        Mahasiswa05 m5 = new Mahasiswa05("127", "Miki", "2A", 3.7);
-    
-        list.tambah(m1);
-        list.tambah(m2);
-        list.tambah(m3);
-        list.tambah(m4);
-        list.tambah(m5);
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Masukkan jumlah data mahasiswa ke-" + (i+1));
+            System.out.print("Masukkan NIM : ");
+            String nim = input.next();
+            System.out.print("Masukkan Nama : ");
+            String nama = input.next();
+            System.out.print("Masukkan Kelas : ");
+            String kelas = input.next();
+            System.out.print("Masukkan IPK : ");
+            double ipk = input.nextDouble();
+            Mahasiswa05 m = new Mahasiswa05(nim, nama, kelas, ipk);
+            list.tambah(m);
+            System.out.println();
+        }
 
         System.out.println("Data mahasiswa sebelum sorting : ");
         list.tampil();
@@ -23,6 +28,10 @@ public class MahasiswaDemo05 {
 
         System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC) : ");
         list.selectionSort();
+        list.tampil();
+
+        System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (ASC) : ");
+        list.insertionSort();
         list.tampil();
     }
 }
