@@ -4,7 +4,9 @@ public class MahasiswaDemo05 {
     public static void main(String[] args) {    
         Scanner input = new Scanner(System.in);
         MahasiwaBerprestasi05 list = new MahasiwaBerprestasi05();
-        for (int i = 0; i < 5; i++) {
+        int jumMhs = 5;
+
+        for (int i = 0; i < jumMhs; i++) {
             System.out.println("Masukkan jumlah data mahasiswa ke-" + (i+1));
             System.out.print("Masukkan NIM : ");
             String nim = input.next();
@@ -18,20 +20,20 @@ public class MahasiswaDemo05 {
             list.tambah(m);
             System.out.println();
         }
-
-        System.out.println("Data mahasiswa sebelum sorting : ");
+        
         list.tampil();
+        //melakukan pencarian data sequential
+        System.out.println("---------------------------------");
+        System.out.println("Pencarian Data");
+        System.out.println("---------------------------------");
+        System.out.println("Masukkan IPK mahasiswa yang dicari : ");
+        System.out.print("IPK : ");
+        double cari = input.nextDouble();
 
-        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
-        list.bubbleSort();
-        list.tampil();
-
-        System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC) : ");
-        list.selectionSort();
-        list.tampil();
-
-        System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (ASC) : ");
-        list.insertionSort();
-        list.tampil();
+        System.out.println("Menggunakan Sequential Searching");
+        double posisi = list.sequentialSearching(cari);
+        int pss = (int) posisi;
+        list.tampilPosisi(cari, pss);
+        list.tampilDataSearch(cari, pss);
     }
 }
