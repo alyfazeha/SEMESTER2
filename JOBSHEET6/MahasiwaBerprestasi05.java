@@ -1,8 +1,12 @@
 package JOBSHEET6;
 public class MahasiwaBerprestasi05 {
-    Mahasiswa05[] listMhs = new Mahasiswa05[5];
-    int idx;
+    Mahasiswa05[] listMhs;
+    int idx = 0;
 
+    public MahasiwaBerprestasi05(int jumMhs) {
+        listMhs = new Mahasiswa05[jumMhs];
+    }
+    
     void tambah (Mahasiswa05 m) {
         if (idx < listMhs.length) {
             listMhs[idx] = m;
@@ -14,8 +18,10 @@ public class MahasiwaBerprestasi05 {
 
     void tampil() {
         for (Mahasiswa05 m:listMhs) {
-            m.tampilInformasi();
-            System.out.println("------------------------------");
+            if (m != null) {
+                m.tampilInformasi();
+                System.out.println("------------------------------"); 
+            }
         }
     }
 
@@ -85,5 +91,20 @@ public class MahasiwaBerprestasi05 {
         } else {
             System.out.println("Data mahasiswa dengan IPK " + x + " tidak ditemukan.");
         }
+    }
+
+    int findBinarySearch(double cari, int left, int right) {
+        int mid;
+        if (right >= left) {
+            mid = (left + right) / 2;
+            if (cari == listMhs[mid].ipk) {
+                return (mid);
+            } else if (listMhs[mid].ipk < cari) {
+                return findBinarySearch(cari, mid+1, right);
+            } else {
+                return findBinarySearch(cari, left, mid-1);
+            }
+        }
+        return -1;
     }
 }
